@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">Laba4New</string>
+
+
+    <string name="category1_title">Парки Ижевска</string>
+
+    <string name="park1_title">Парк Кирова</string>
+    <string name="park2_title">Парк Горького</string>
+    <string name="park3_title">Парк Космонавтов</string>
+    <string name="park1_desc">Там бегать</string>
+    <string name="park2_desc">Там атракционы</string>
+    <string name="park3_desc">Там большая шаурма</string>
+
+
+    <string name="category2_title">Рестораны Ижевска</string>
+
+    <string name="restaurant1_title">Старик Хинкалыч</string>
+    <string name="restaurant2_title">Ростикс</string>
+    <string name="restaurant3_title">Кинза</string>
+    <string name="restaurant1_desc">Там грузинская кухня</string>
+    <string name="restaurant2_desc">Там фастфуд курица</string>
+    <string name="restaurant3_desc">Там тоже грузинская кухня</string>
+
+
+    <string name="category3_title">Торговые центры Ижевска</string>
+
+    <string name="mall1_title">Талисман</string>
+    <string name="mall2_title">Матрица</string>
+    <string name="mall3_title">Флагман</string>
+    <string name="mall1_desc">Там есть читай-город</string>
+    <string name="mall2_desc">Он очень далеко</string>
+    <string name="mall3_desc">Туда можно на 7 трамвае доехать</string>
+
 </resources>
