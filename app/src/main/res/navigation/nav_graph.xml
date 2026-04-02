@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/categoriesFragment">
+
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.laba4new.CategoriesFragment"
+        android:label="categories_fragment"
+        tools:layout="@layout/categories_fragment" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_placesFragment"
+            app:destination="@id/placesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/placesFragment"
+        android:name="com.example.laba4new.PlacesFragment"
+        android:label="places_fragment"
+        tools:layout="@layout/places_fragment" >
+        <action
+            android:id="@+id/action_placesFragment_to_detailedPlaceFragment"
+            app:destination="@id/detailedPlaceFragment" />
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedPlaceFragment"
+        android:name="com.example.laba4new.DetailedPlaceFragment"
+        android:label="detailed_place_fragment"
+        tools:layout="@layout/detailed_place_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+
+        <argument
+            android:name="placeId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.laba4new.AboutFragment"
+        android:label="about_fragment"
+        tools:layout="@layout/about_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.laba4new.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment">
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_placesFragment"
+        app:destination="@id/placesFragment">
+
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+    </action>
+
+    <action
+        android:id="@+id/action_global_aboutFragment"
+        app:destination="@id/aboutFragment"/>
+
+    <action
+        android:id="@+id/action_global_settingsFragment"
+        app:destination="@id/settingsFragment"/>
+
+</navigation>
+

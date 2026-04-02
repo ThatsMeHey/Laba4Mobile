@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small">8dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="big">25dp</dimen>
+    <dimen name="maxWidth">450dp</dimen>
+    <dimen name="titleSize">20dp</dimen>
+    <dimen name="iconSize">60dp</dimen>
+</resources>
