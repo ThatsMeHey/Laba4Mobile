@@ -5,41 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettingsFragment"
-    android:background="@color/background">
+    android:background="@color/background"
+    android:padding="@dimen/big">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/settingsTitle"
+        style="@style/titleStyle"
+        android:text="@string/settings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnRussian"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:padding="@dimen/big">
+        android:text="Русский"
+        app:layout_constraintTop_toBottomOf="@id/settingsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
 
-        <TextView
-            android:id="@+id/settingsTitle"
-            style="@style/titleStyle"
-            android:text="@string/settings"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <Button
-            android:id="@+id/btnRussian"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Русский"
-            app:layout_constraintTop_toBottomOf="@id/settingsTitle"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp"/>
-
-        <Button
-            android:id="@+id/btnEnglish"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="English"
-            app:layout_constraintTop_toBottomOf="@id/btnRussian"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnEnglish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="English"
+        app:layout_constraintTop_toBottomOf="@id/btnRussian"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
