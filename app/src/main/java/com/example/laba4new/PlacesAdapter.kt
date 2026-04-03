@@ -8,9 +8,11 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.signature.ObjectKey
 
-class PlacesAdapter(private val items: List<Place>, private val categoryId: Int) :
+class PlacesAdapter(private val categoryId: Int) :
     RecyclerView.Adapter<PlacesAdapter.ViewHolder>() {
+    private val items = categoriesList[categoryId].places
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image: ImageView = view.findViewById(R.id.placeImage)
@@ -29,16 +31,16 @@ class PlacesAdapter(private val items: List<Place>, private val categoryId: Int)
         Glide.with(holder.itemView.context)
             .load(item.imageRes)
             .override(800, 600)
+            .signature(ObjectKey(item.imageRes))
             .into(holder.image)
         holder.title.setText(item.titleRes)
         holder.description.setText(item.descriptionRes)
 
         holder.itemView.setOnClickListener {
-            val action = PlacesFragmentDirections
-                .actionPlacesFragmentToDetailedPlaceFragment(
-                    categoryId = categoryId,
-                    placeId = item.placeId
-                )
+            val action = NavGraphDirections.actionGlobalDetailedPlaceFragment(
+                categoryId = categoryId,
+                placeId = item.placeId
+            )
             holder.itemView.findNavController().navigate(action)
         }
     }

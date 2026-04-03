@@ -10,22 +10,67 @@
         android:name="com.example.laba4new.CategoriesFragment"
         android:label="categories_fragment"
         tools:layout="@layout/categories_fragment" >
-        <action
-            android:id="@+id/action_categoriesFragment_to_placesFragment"
-            app:destination="@id/placesFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/placesFragment"
+        android:id="@+id/nav_category1"
         android:name="com.example.laba4new.PlacesFragment"
-        android:label="places_fragment"
-        tools:layout="@layout/places_fragment" >
-        <action
-            android:id="@+id/action_placesFragment_to_detailedPlaceFragment"
-            app:destination="@id/detailedPlaceFragment" />
+        tools:layout="@layout/places_fragment">
         <argument
             android:name="categoryId"
-            app:argType="integer" />
+            app:argType="integer"
+            android:defaultValue="0" />
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_category2"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_category3"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_category4"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.example.laba4new.CategoriesFragment"
+        tools:layout="@layout/categories_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.laba4new.AboutFragment"
+        tools:layout="@layout/about_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.laba4new.SettingsFragment"
+        tools:layout="@layout/settings_fragment">
+    </fragment>
+
+
+
+
     <fragment
         android:id="@+id/detailedPlaceFragment"
         android:name="com.example.laba4new.DetailedPlaceFragment"
@@ -39,35 +84,17 @@
             android:name="placeId"
             app:argType="integer" />
     </fragment>
-    <fragment
-        android:id="@+id/aboutFragment"
-        android:name="com.example.laba4new.AboutFragment"
-        android:label="about_fragment"
-        tools:layout="@layout/about_fragment">
-    </fragment>
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.laba4new.SettingsFragment"
-        android:label="settings_fragment"
-        tools:layout="@layout/settings_fragment">
-    </fragment>
 
     <action
-        android:id="@+id/action_global_placesFragment"
-        app:destination="@id/placesFragment">
-
+        android:id="@+id/action_global_detailedPlaceFragment"
+        app:destination="@id/detailedPlaceFragment">
         <argument
             android:name="categoryId"
             app:argType="integer" />
+        <argument
+            android:name="placeId"
+            app:argType="integer" />
     </action>
-
-    <action
-        android:id="@+id/action_global_aboutFragment"
-        app:destination="@id/aboutFragment"/>
-
-    <action
-        android:id="@+id/action_global_settingsFragment"
-        app:destination="@id/settingsFragment"/>
 
 </navigation>
 

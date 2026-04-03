@@ -22,7 +22,7 @@ android:background="@color/background">
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/cardBackground"/>
+            android:background="@color/toolAndBottomBar"/>
 
         <fragment
             android:id="@+id/nav_host_fragment"
@@ -44,7 +44,7 @@ android:background="@color/background">
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@color/cardBackground"
+            android:background="@color/toolAndBottomBar"
             app:itemIconTint="@color/bottom_nav_colors"
             app:itemTextColor="@color/bottom_nav_colors"
             app:labelVisibilityMode="labeled"

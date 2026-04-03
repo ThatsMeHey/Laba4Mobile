@@ -9,12 +9,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
+import com.bumptech.glide.signature.ObjectKey
 import kotlin.getValue
 
 class DetailedPlaceFragment : Fragment() {
 
-    private lateinit var items: List<Place>
-    private lateinit var item: Place
     private val args: DetailedPlaceFragmentArgs by navArgs()
 
     override fun onCreateView(
@@ -26,8 +25,8 @@ class DetailedPlaceFragment : Fragment() {
 
         val categoryId = args.categoryId
         val placeId = args.placeId
-        items = categoriesList[categoryId].places
-        item = items[placeId]
+        var items = categoriesList[categoryId].places
+        var item = items[placeId]
 
 
         val title = view.findViewById<TextView>(R.id.detailTitle)
@@ -36,7 +35,10 @@ class DetailedPlaceFragment : Fragment() {
 
         title.setText(item.titleRes)
         description.setText(item.descriptionRes)
-        Glide.with(this).load(item.imageRes).into(image)
+        Glide.with(this)
+            .load(item.imageRes)
+            .signature(ObjectKey(item.imageRes))
+            .into(image)
 
         return view
     }

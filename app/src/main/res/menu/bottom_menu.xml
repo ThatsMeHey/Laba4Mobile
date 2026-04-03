@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/nav_main"
-        android:icon="@drawable/home_icon"
-        android:title="@string/main"/>
-    <item
         android:id="@+id/nav_category1"
         android:icon="@drawable/park_icon"
         android:title="@string/category1_title"/>
@@ -18,4 +14,9 @@
         android:id="@+id/nav_category3"
         android:icon="@drawable/mall_icon"
         android:title="@string/category3_title"/>
+
+    <item
+        android:id="@+id/nav_category4"
+        android:icon="@drawable/museum_icon"
+        android:title="@string/category4_title"/>
 </menu>

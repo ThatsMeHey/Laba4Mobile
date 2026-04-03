@@ -1,7 +1,5 @@
 package com.example.laba4new
 
-import android.content.Context
-
 data class Place(
     val placeId: Int,
     val imageRes: Int,

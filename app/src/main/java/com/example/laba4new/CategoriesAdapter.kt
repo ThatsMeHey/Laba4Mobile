@@ -1,16 +1,14 @@
 package com.example.laba4new
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CategoriesAdapter(private val items: List<Category>) :
     RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
@@ -35,31 +33,18 @@ class CategoriesAdapter(private val items: List<Category>) :
         holder.title.setText(item.categoryTitle)
 
         holder.itemView.setOnClickListener {
-            val action = CategoriesFragmentDirections
-                .actionCategoriesFragmentToPlacesFragment(
-                    categoryId = item.categoryId
-                )
-            holder.itemView.findNavController().navigate(action)
-
-            val bottomNav = (holder.itemView.context as? AppCompatActivity)
-                ?.findViewById<BottomNavigationView>(R.id.bottom_nav)
-
-            bottomNav?.menu?.findItem(
-                when(item.categoryId) {
-                    0 -> R.id.nav_category1
-                    1 -> R.id.nav_category2
-                    2 -> R.id.nav_category3
-                    else -> R.id.nav_main
-                }
-            )?.isChecked = true
-
-            if (item.categoryId > 2){
-                bottomNav?.menu?.let { menu ->
-                    for (i in 0 until menu.size()) {
-                        menu.getItem(i).isChecked = false
-                    }
-                }
+            val destId = when (item.categoryId) {
+                0 -> R.id.nav_category1
+                1 -> R.id.nav_category2
+                2 -> R.id.nav_category3
+                3 -> R.id.nav_category4
+                else -> return@setOnClickListener
             }
+            val navOptions = NavOptions.Builder()
+                .setPopUpTo(R.id.categoriesFragment, inclusive = false)
+                .setLaunchSingleTop(true)
+                .build()
+            holder.itemView.findNavController().navigate(destId, null, navOptions)
         }
     }
 

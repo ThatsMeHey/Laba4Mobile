@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import java.util.*
 
 class SettingsFragment : Fragment() {
@@ -37,17 +36,6 @@ class SettingsFragment : Fragment() {
         }
 
         return view
-    }
-
-    override fun onResume() {
-        super.onResume()
-
-        val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_nav)
-        bottomNav?.menu?.let { menu ->
-            for (i in 0 until menu.size()) {
-                menu.getItem(i).isChecked = false
-            }
-        }
     }
 
     private fun setLocale(language: String) {

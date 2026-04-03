@@ -6,4 +6,5 @@
     <color name="cardBackground">#F2D088</color>
     <color name="themeBackground">#B1500D</color>
     <color name="darkOrange">#6D2D02</color>
+    <color name="toolAndBottomBar">#F2AF88</color>
 </resources>
