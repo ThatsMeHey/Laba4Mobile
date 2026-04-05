@@ -33,20 +33,13 @@ class CategoriesAdapter(private val items: List<Category>) :
         holder.title.setText(item.categoryTitle)
 
         holder.itemView.setOnClickListener {
-            val destId = when (item.categoryId) {
-                0 -> R.id.nav_category1
-                1 -> R.id.nav_category2
-                2 -> R.id.nav_category3
-                3 -> R.id.nav_category4
-                else -> return@setOnClickListener
-            }
             val navController = holder.itemView.findNavController()
             val navOptions = NavOptions.Builder()
                 .setPopUpTo(R.id.nav_categories, inclusive = false, saveState = true)
                 .setLaunchSingleTop(true)
                 .setRestoreState(true)
                 .build()
-            navController.navigate(destId, null, navOptions)
+            navController.navigate(categoriesList[item.categoryId].navigationId, null, navOptions)
             if (navController.currentDestination?.id == R.id.detailedPlaceFragment) {
                 navController.popBackStack()
             }
