@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_categories">
+
+    <fragment
+        android:id="@+id/nav_category1"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_category2"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="1" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_category3"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="2" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_category4"
+        android:name="com.example.laba4new.PlacesFragment"
+        tools:layout="@layout/places_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer"
+            android:defaultValue="3" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.example.laba4new.CategoriesFragment"
+        tools:layout="@layout/categories_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.laba4new.AboutFragment"
+        tools:layout="@layout/about_fragment">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.laba4new.SettingsFragment"
+        tools:layout="@layout/settings_fragment">
+    </fragment>
+
+
+
+
+
+    <fragment
+        android:id="@+id/detailedPlaceFragment"
+        android:name="com.example.laba4new.DetailedPlaceFragment"
+        android:label="detailed_place_fragment"
+        tools:layout="@layout/detailed_place_fragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+
+        <argument
+            android:name="placeId"
+            app:argType="integer" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_detailedPlaceFragment"
+        app:destination="@id/detailedPlaceFragment">
+        <argument
+            android:name="categoryId"
+            app:argType="integer" />
+        <argument
+            android:name="placeId"
+            app:argType="integer" />
+    </action>
+
+</navigation>
+

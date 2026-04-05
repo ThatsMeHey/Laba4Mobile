@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Места в Ижевске</string>
+
+
+    <string name="category1_title">Парки</string>
+
+    <string name="park1_title">Парк Кирова</string>
+    <string name="park2_title">Парк Горького</string>
+    <string name="park3_title">Парк Космонавтов</string>
+    <string name="park4_title">Козий Парк</string>
+    <string name="park1_desc">Популярный городской парк с просторными аллеями, зелёными зонами и местами для отдыха и спорта. Отлично подходит для прогулок и пробежек.</string>
+    <string name="park2_desc">Живописный парк с аттракционами и уютной атмосферой. Здесь можно отдохнуть с семьёй, покататься на каруселях и насладиться видом на пруд.</string>
+    <string name="park3_desc">Тихий и просторный парк для прогулок на свежем воздухе. Отличное место для спокойного отдыха вдали от городской суеты.</string>
+    <string name="park4_desc">Уютная зелёная зона с неформальной атмосферой. Подходит для прогулок, встреч с друзьями и отдыха на природе.</string>
+
+
+    <string name="category2_title">Рестораны</string>
+
+    <string name="restaurant1_title">Старик Хинкалыч</string>
+    <string name="restaurant2_title">Ростикс</string>
+    <string name="restaurant3_title">Кинза</string>
+    <string name="restaurant4_title">Вино и мясо</string>
+    <string name="restaurant5_title">Каре</string>
+    <string name="restaurant1_desc">Уютный ресторан грузинской кухни с атмосферой гостеприимства и традиционными блюдами, такими как хинкали и хачапури.</string>
+    <string name="restaurant2_desc">Популярное место быстрого питания с блюдами из курицы. Подходит для быстрого перекуса в центре города.</string>
+    <string name="restaurant3_desc">Ресторан с грузинской кухней и стильным интерьером. Отличное место для ужина и встреч с друзьями.</string>
+    <string name="restaurant4_desc">Ресторан с авторской кухней и акцентом на мясные блюда. Подходит для спокойного ужина в приятной атмосфере.</string>
+    <string name="restaurant5_desc">Современный ресторан с разнообразным меню и комфортной обстановкой для отдыха и деловых встреч.</string>
+
+
+    <string name="category3_title">Торговые центры</string>
+
+    <string name="mall1_title">Талисман</string>
+    <string name="mall2_title">Матрица</string>
+    <string name="mall3_title">Флагман</string>
+    <string name="mall4_title">Петровский</string>
+    <string name="mall5_title">ТЦ Кит</string>
+    <string name="mall1_desc">Один из крупнейших торговых центров города с большим выбором магазинов, кафе и развлечений.</string>
+    <string name="mall2_desc">Крупный торговый центр с удобной инфраструктурой и широким выбором магазинов и услуг.</string>
+    <string name="mall3_desc">Современный торговый комплекс с магазинами, зонами отдыха и удобной транспортной доступностью.</string>
+    <string name="mall4_desc">Популярный торговый центр с разнообразием магазинов и удобным расположением для повседневных покупок.</string>
+    <string name="mall5_desc">Торговый центр с большим выбором магазинов и развлечений для всей семьи.</string>
+
+
+    <string name="category4_title">Музеи</string>
+
+    <string name="museum1_title">Национальный музей Удмуртской Республики им. К. Герда</string>
+    <string name="museum2_title">Удмуртский республиканский музей изобразительных искусств</string>
+    <string name="museum3_title">Музейно-выставочный комплекс стрелкового оружия им. М.Т. Калашникова</string>
+    <string name="museum4_title">Выставочный центр «Галерея»</string>
+    <string name="museum5_title">Ижевский мотомузей Кожушковых</string>
+    <string name="museum1_desc">Главный музей региона, рассказывающий об истории и культуре Удмуртии, с богатой коллекцией экспонатов.</string>
+    <string name="museum2_desc">Музей изобразительных искусств с коллекцией живописи, графики и скульптуры российских и зарубежных авторов.</string>
+    <string name="museum3_desc">Известный музей, посвящённый истории стрелкового оружия и жизни Михаила Калашникова. Включает интерактивные экспозиции.</string>
+    <string name="museum4_desc">Современное выставочное пространство с временными экспозициями, культурными мероприятиями и арт-проектами.</string>
+    <string name="museum5_desc">Уникальный музей техники, посвящённый истории мотоциклов и развитию мотокультуры.</string>
+
+
+    <string name="open_drawer">Открыть меню</string>
+    <string name="close_drawer">Закрыть меню</string>
+
+    <string name="about">О приложении</string>
+    <string name="settings">Настройки</string>
+
+    <string name="categories">Категории</string>
+    <string name="places">Места</string>
+
+    <string name="main">Главная</string>
+
+    <string name="aboutDesc">В этом приложении вы можете ознакомится с рекомендованными к посещению местами в городе Ижевск.</string>
+
+</resources>
