@@ -3,14 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/categoriesFragment">
-
-    <fragment
-        android:id="@+id/categoriesFragment"
-        android:name="com.example.laba4new.CategoriesFragment"
-        android:label="categories_fragment"
-        tools:layout="@layout/categories_fragment" >
-    </fragment>
+    app:startDestination="@id/nav_categories">
 
     <fragment
         android:id="@+id/nav_category1"
@@ -21,7 +14,6 @@
             app:argType="integer"
             android:defaultValue="0" />
     </fragment>
-
     <fragment
         android:id="@+id/nav_category2"
         android:name="com.example.laba4new.PlacesFragment"
@@ -31,7 +23,6 @@
             app:argType="integer"
             android:defaultValue="1" />
     </fragment>
-
     <fragment
         android:id="@+id/nav_category3"
         android:name="com.example.laba4new.PlacesFragment"
@@ -41,7 +32,6 @@
             app:argType="integer"
             android:defaultValue="2" />
     </fragment>
-
     <fragment
         android:id="@+id/nav_category4"
         android:name="com.example.laba4new.PlacesFragment"
@@ -51,6 +41,7 @@
             app:argType="integer"
             android:defaultValue="3" />
     </fragment>
+
 
     <fragment
         android:id="@+id/nav_categories"
@@ -67,6 +58,7 @@
         android:name="com.example.laba4new.SettingsFragment"
         tools:layout="@layout/settings_fragment">
     </fragment>
+
 
 
 

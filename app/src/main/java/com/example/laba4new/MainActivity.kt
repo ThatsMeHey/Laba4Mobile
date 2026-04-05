@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.core.view.forEach
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
@@ -21,8 +22,6 @@ class MainActivity : AppCompatActivity()
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = findNavController(R.id.nav_host_fragment)
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
 
@@ -36,37 +35,37 @@ class MainActivity : AppCompatActivity()
         toolbar.title = getString(R.string.app_name)
         setSupportActionBar(toolbar)
 
-        val toggle = ActionBarDrawerToggle(
-            this,
-            drawer,
-            toolbar,
-            R.string.open_drawer,
-            R.string.close_drawer
-        )
-        drawer.addDrawerListener(toggle)
-        toggle.syncState()
+        if (drawer != null) {
+            val toggle = ActionBarDrawerToggle(
+                this,
+                drawer,
+                toolbar,
+                R.string.open_drawer,
+                R.string.close_drawer
+            )
+            drawer.addDrawerListener(toggle)
+            toggle.syncState()
+        }
+
 
         bottomNav.setOnItemSelectedListener { item ->
             val navOptions = NavOptions.Builder()
-                .setPopUpTo(R.id.categoriesFragment, inclusive = false, saveState = true)
+                .setPopUpTo(R.id.nav_categories, inclusive = false, saveState = true)
                 .setLaunchSingleTop(true)
                 .setRestoreState(true)
                 .build()
             navController.navigate(item.itemId, null, navOptions)
+            if (navController.currentDestination?.id == R.id.detailedPlaceFragment) {
+                navController.popBackStack()
+            }
             true
         }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            val bottomNavIds = setOf(
-                R.id.nav_categories,
-                R.id.nav_about,
-                R.id.nav_settings
-            )
-            if (destination.id in bottomNavIds) {
-                bottomNav.menu.let { menu ->
-                    for (i in 0 until menu.size()) {
-                        menu.getItem(i).isChecked = false
-                    }
+            val drawerNavIds = setOf(R.id.nav_categories, R.id.nav_about, R.id.nav_settings)
+            if (destination.id in drawerNavIds) {
+                bottomNav.post {
+                    bottomNav.menu.forEach { item -> item.isChecked = false }
                 }
             }
         }

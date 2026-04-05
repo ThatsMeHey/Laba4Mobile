@@ -26,14 +26,4 @@ class CategoriesFragment : Fragment() {
 
         return view
     }
-    override fun onResume() {
-        super.onResume()
-
-        val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_nav)
-        bottomNav?.menu?.let { menu ->
-            for (i in 0 until menu.size()) {
-                menu.getItem(i).isChecked = false
-            }
-        }
-    }
 }

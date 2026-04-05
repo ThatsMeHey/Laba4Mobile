@@ -40,11 +40,16 @@ class CategoriesAdapter(private val items: List<Category>) :
                 3 -> R.id.nav_category4
                 else -> return@setOnClickListener
             }
+            val navController = holder.itemView.findNavController()
             val navOptions = NavOptions.Builder()
-                .setPopUpTo(R.id.categoriesFragment, inclusive = false)
+                .setPopUpTo(R.id.nav_categories, inclusive = false, saveState = true)
                 .setLaunchSingleTop(true)
+                .setRestoreState(true)
                 .build()
-            holder.itemView.findNavController().navigate(destId, null, navOptions)
+            navController.navigate(destId, null, navOptions)
+            if (navController.currentDestination?.id == R.id.detailedPlaceFragment) {
+                navController.popBackStack()
+            }
         }
     }
 
